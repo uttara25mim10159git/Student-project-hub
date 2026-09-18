@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="form-wrap">
+<h1>Create your student profile</h1>
+<p class="muted">Use details you are comfortable using for this academic demo.</p>
+<form method="post" class="form-card">
+<label>Name<input name="name" required></label>
+<label>Email<input type="email" name="email" required></label>
+<label>Password<input type="password" name="password" minlength="6" required></label>
+<label>Branch<input name="branch" placeholder="e.g. AI/ML" required></label>
+<label>Year<input type="number" name="year" min="1" max="6" required></label>
+<button class="btn" type="submit">Create account</button>
+</form>
+</div>
+{% endblock %}

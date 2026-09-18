@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Add Project{% endblock %}
+{% block content %}
+<div class="form-wrap wide">
+<h1>Add a project</h1>
+<p class="muted">Keep the description short and explain what you actually built. The project text is analyzed by a small ML classifier to predict its domain.</p>
+<form method="post" class="form-card">
+<label>Project title<input name="title" required></label>
+<label>Description<textarea name="description" rows="5" required></textarea></label>
+<div class="two"><label>Domain<input name="domain" placeholder="AI/ML, Web, IoT..." required></label>
+<label>Technologies<input name="technologies" placeholder="Python, Flask, SQLite" required></label></div>
+<div class="two"><label>Difficulty<select name="difficulty"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label>
+<label>Team size<input type="number" name="team_size" min="1" max="20" value="1"></label></div>
+<div class="two"><label>GitHub link<input name="github_link" type="url" placeholder="https://github.com/..."></label>
+<label>Demo link<input name="demo_link" type="url" placeholder="https://..."></label></div>
+<label>Status<select name="status"><option>Completed</option><option>In progress</option><option>Looking for teammates</option></select></label>
+<button class="btn" type="submit">Publish project</button>
+</form>
+</div>
+{% endblock %}

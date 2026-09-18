@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<div class="profile-head"><div><p class="eyebrow">PROFILE</p><h1>{{ student.name }}</h1><p>{{ student.branch }} · Year {{ student.year }}</p></div><div class="profile-stat"><strong>{{ project_count }}</strong><span>Projects</span></div></div>
+<form method="post" class="form-card">
+<label>Email<input value="{{ student.email }}" disabled></label>
+<label>Skills<input name="skills" value="{{ student.skills or '' }}" placeholder="Python, C++, ML, Web Development"></label>
+<button class="btn" type="submit">Save profile</button>
+</form>
+{% endblock %}

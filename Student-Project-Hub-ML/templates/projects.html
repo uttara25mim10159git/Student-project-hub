@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Explore Projects{% endblock %}
+{% block content %}
+<div class="section-head"><div><p class="eyebrow">DISCOVER</p><h1>Student Projects</h1></div></div>
+<form class="filters" method="get">
+<input name="q" value="{{ q }}" placeholder="Search title, description or technology">
+<select name="domain"><option value="">All domains</option>{% for d in domains %}<option {% if d==selected_domain %}selected{% endif %}>{{ d }}</option>{% endfor %}</select>
+<select name="difficulty"><option value="">All levels</option>{% for d in ["Beginner","Intermediate","Advanced"] %}<option {% if d==selected_difficulty %}selected{% endif %}>{{ d }}</option>{% endfor %}</select>
+<button class="btn" type="submit">Search</button>
+</form>
+<div class="grid">
+{% for p in projects %}
+<article class="card"><span class="tag">{{ p.domain }}</span><h3>{{ p.title }}</h3><p>{{ p.description[:160] }}{% if p.description|length > 160 %}...{% endif %}</p>
+<div class="muted">{{ p.technologies }}</div><div class="muted">By {{ p.owner_name }} · {{ p.difficulty }}</div>
+<a class="text-link" href="{{ url_for('project_detail', project_id=p.id) }}">View project →</a></article>
+{% else %}<div class="empty card"><h3>No matching projects</h3><p>Try a different keyword or filter.</p></div>{% endfor %}
+</div>
+{% endblock %}

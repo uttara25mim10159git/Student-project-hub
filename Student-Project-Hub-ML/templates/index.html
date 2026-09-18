@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Student Project Hub{% endblock %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">COLLEGE PROJECT PLATFORM</p>
+    <h1>Find projects.<br>Share your work.<br>Build teams.</h1>
+    <p class="lead">A simple place for students to discover academic projects, showcase their work and find teammates, with ML-based project classification and recommendations.</p>
+    <a class="btn" href="{{ url_for('projects') }}">Explore Projects</a>
+    {% if not current_user %}<a class="btn secondary" href="{{ url_for('register') }}">Create Profile</a>{% endif %}
+  </div>
+  <div class="hero-card">
+    <div class="stat"><strong>01</strong><span>Discover</span></div>
+    <div class="stat"><strong>02</strong><span>Showcase</span></div>
+    <div class="stat"><strong>03</strong><span>Collaborate</span></div>
+  </div>
+</section>
+
+<div class="section-head"><h2>Recently added</h2><a href="{{ url_for('projects') }}">View all →</a></div>
+<div class="grid">
+{% for p in projects %}
+  <article class="card">
+    <span class="tag">{{ p.domain }}</span>
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description[:150] }}{% if p.description|length > 150 %}...{% endif %}</p>
+    <div class="muted">{{ p.technologies }} · {{ p.difficulty }}</div>
+    <a class="text-link" href="{{ url_for('project_detail', project_id=p.id) }}">View project →</a>
+  </article>
+{% else %}
+  <p>No projects yet. Register and add the first one.</p>
+{% endfor %}
+</div>
+{% endblock %}

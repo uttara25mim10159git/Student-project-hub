@@ -1,0 +1,61 @@
+title,description,technologies,domain
+Spam Email Detector,Classifies emails as spam or normal using text features and supervised learning.,Python scikit-learn TF-IDF,NLP
+Sentiment Analyzer,Detects positive negative or neutral sentiment in student feedback.,Python NLTK scikit-learn,NLP
+College FAQ Bot,Answers common college questions using text processing and retrieval.,Python NLP Flask,NLP
+Resume Skill Extractor,Extracts skills and keywords from resumes for a placement helper.,Python spaCy NLP,NLP
+News Category Classifier,Classifies news articles into predefined categories using machine learning.,Python TF-IDF Logistic Regression,NLP
+Text Summarizer,Summarizes long student notes using natural language processing.,Python NLTK NLP,NLP
+Fake Review Detector,Identifies suspicious reviews from their written text.,Python pandas scikit-learn,NLP
+Language Identifier,Detects the language of a short text entered by a user.,Python NLP scikit-learn,NLP
+Image Classifier,Classifies images into predefined object categories with a trained model.,Python TensorFlow CNN,Computer Vision
+Face Mask Detector,Detects whether a person is wearing a face mask in an image.,Python OpenCV TensorFlow,Computer Vision
+Plant Disease Detector,Identifies common plant diseases from leaf photographs.,Python CNN OpenCV,Computer Vision
+Hand Gesture Recognition,Recognizes hand gestures from camera frames.,Python OpenCV MediaPipe,Computer Vision
+Attendance Face Recognition,Marks attendance by recognizing registered faces from a camera.,Python OpenCV face recognition,Computer Vision
+Pothole Detection,Detects road potholes from images for road maintenance.,Python YOLO OpenCV,Computer Vision
+Sign Language Recognition,Recognizes basic sign language gestures from images.,Python OpenCV CNN,Computer Vision
+Document Scanner,Finds document boundaries and improves scanned document images.,Python OpenCV image processing,Computer Vision
+Student Performance Predictor,Predicts student performance from attendance study hours and previous marks.,Python pandas scikit-learn,Data Science
+House Price Analysis,Explores housing data and predicts prices using regression models.,Python pandas NumPy scikit-learn,Data Science
+Sales Dashboard,Analyzes sales records and displays trends with charts.,Python pandas matplotlib,Data Science
+Customer Churn Prediction,Predicts whether customers may leave a service from historical data.,Python pandas scikit-learn,Data Science
+Electricity Usage Forecast,Analyzes electricity consumption and predicts future usage.,Python pandas regression,Data Science
+Movie Recommendation Analysis,Studies ratings data to find patterns and useful recommendations.,Python pandas NumPy,Data Science
+College Survey Analyzer,Analyzes survey responses and summarizes student preferences.,Python pandas matplotlib,Data Science
+Weather Data Analysis,Explores weather records and identifies seasonal patterns.,Python pandas matplotlib,Data Science
+Library Management System,Manages books issue records returns and student accounts.,Python Flask SQLite,Web Development
+Student Project Portal,Provides a web platform for students to publish and discover projects.,Python Flask HTML CSS SQLite,Web Development
+Online Quiz System,Allows students to attempt quizzes and stores scores.,Python Flask SQLite JavaScript,Web Development
+College Event Portal,Lists events and allows students to register online.,Python Django HTML CSS SQLite,Web Development
+Expense Tracker,Records personal expenses and displays spending summaries.,Python Flask SQLite JavaScript,Web Development
+Notes Sharing Website,Allows students to upload and access study notes.,Python Flask HTML CSS SQLite,Web Development
+Study Planner,Provides a browser based planner for assignments and study tasks.,HTML CSS JavaScript Flask,Web Development
+Campus Lost And Found,Helps students post and search for lost items on campus.,Python Flask SQLite HTML CSS,Web Development
+Smart Plant Monitor,Uses sensors to monitor soil moisture and automate watering.,Arduino ESP32 IoT sensors,IoT
+Smart Dustbin,Uses an ultrasonic sensor to detect bin fill level and open the lid.,Arduino ultrasonic sensor servo,IoT
+Home Automation,Controls lights and appliances using a microcontroller and sensors.,ESP32 sensors relay IoT,IoT
+Smart Parking,Detects available parking spaces using sensors and displays availability.,Arduino ultrasonic sensors IoT,IoT
+Weather Station,Collects temperature humidity and pressure readings from sensors.,ESP32 sensors IoT,IoT
+Energy Monitoring Device,Measures electricity usage and sends readings to a dashboard.,ESP32 current sensor MQTT,IoT
+Smart Classroom,Monitors classroom environment using connected sensors.,ESP32 temperature light sensors,IoT
+Water Tank Monitor,Tracks water level and controls a pump automatically.,Arduino ultrasonic relay,IoT
+Network Intrusion Detector,Detects suspicious network traffic using machine learning features.,Python scikit-learn networking,Cybersecurity
+Password Strength Checker,Evaluates password patterns and gives security feedback.,Python regex cybersecurity,Cybersecurity
+Phishing URL Detector,Classifies URLs as suspicious or legitimate using extracted features.,Python pandas scikit-learn,Cybersecurity
+File Integrity Monitor,Detects unexpected file changes using cryptographic hashes.,Python hashlib security,Cybersecurity
+Secure Login System,Implements password hashing sessions and access control.,Python Flask Werkzeug security,Cybersecurity
+Port Scanner,Checks common network ports to help inspect a local system.,Python sockets networking,Cybersecurity
+Malware Feature Classifier,Classifies files using extracted static features for security analysis.,Python pandas scikit-learn,Cybersecurity
+Log Anomaly Detector,Finds unusual authentication events in server logs.,Python pandas machine learning,Cybersecurity
+CSV Data Cleaner,Cleans missing values duplicates and inconsistent entries in datasets.,Python pandas NumPy,Data Science
+Recommendation Engine,Finds similar products from user ratings and item features.,Python pandas scikit-learn,Data Science
+Object Detection Demo,Detects multiple objects in camera images using a pretrained detector.,Python YOLO OpenCV,Computer Vision
+Voice Command Assistant,Processes spoken commands and maps them to simple actions.,Python speech recognition NLP,NLP
+Student Feedback Analyzer,Groups and classifies written student feedback by topic.,Python pandas TF-IDF,NLP
+AI Study Assistant,Uses text classification to route student questions to study categories.,Python scikit-learn NLP,NLP
+Traffic Sign Recognition,Recognizes road signs from images for an intelligent driving prototype.,Python CNN OpenCV,Computer Vision
+Exam Score Predictor,Uses historical marks and attendance to estimate score ranges.,Python pandas regression,Data Science
+Campus Navigation Website,Shows campus buildings and routes through a responsive web interface.,HTML CSS JavaScript Flask,Web Development
+Smart Door Lock,Controls a door lock with RFID and a connected microcontroller.,Arduino RFID servo,IoT
+Secure File Vault,Encrypts and protects files with password based access.,Python cryptography security,Cybersecurity
+CSV Fraud Detector,Flags unusual transaction records using classification features.,Python pandas scikit-learn,Cybersecurity

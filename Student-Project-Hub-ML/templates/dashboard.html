@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="section-head"><div><p class="eyebrow">YOUR SPACE</p><h1>{{ current_user.name }}'s Dashboard</h1></div><a class="btn" href="{{ url_for('new_project') }}">+ Add project</a></div>
+<div class="grid">
+{% for p in projects %}
+<article class="card">
+<span class="tag">{{ p.domain }}</span><h3>{{ p.title }}</h3>
+<p>{{ p.description[:130] }}{% if p.description|length > 130 %}...{% endif %}</p>
+<a class="text-link" href="{{ url_for('project_detail', project_id=p.id) }}">Open →</a>
+<form method="post" action="{{ url_for('delete_project', project_id=p.id) }}" onsubmit="return confirm('Delete this project?')">
+<button class="danger-link" type="submit">Delete</button>
+</form>
+</article>
+{% else %}
+<div class="empty card"><h3>No projects yet</h3><p>Add your first academic project to your profile.</p></div>
+{% endfor %}
+</div>
+{% if requests %}
+<div class="section-head"><h2>Collaboration requests</h2></div>
+<div class="table-wrap"><table><tr><th>Project</th><th>Student</th><th>Message</th><th>Status</th></tr>
+{% for r in requests %}<tr><td>{{ r.title }}</td><td>{{ r.student_name }}<br><span class="muted">{{ r.email }}</span></td><td>{{ r.message or "—" }}</td><td>{{ r.status }}</td></tr>{% endfor %}
+</table></div>
+{% endif %}
+{% endblock %}
